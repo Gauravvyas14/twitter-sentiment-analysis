@@ -1,0 +1,1 @@
+bin/flume-ng agent -n Twitter -c conf -f conf/flume.conf

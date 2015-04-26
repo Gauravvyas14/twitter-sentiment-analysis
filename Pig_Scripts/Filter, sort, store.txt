@@ -1,0 +1,63 @@
+english_tweets = filter tweets by lang=='en' and text is not null and user# 'name' is not null;
+
+
+
+
+
+sentiments_tweets  = foreach english_tweets generate  user# 'name' as user_name:chararray, text as tweets:chararray, Sentiments(text) as if_sentiments;
+
+
+
+if_senti_tweets = filter sentiments_tweets by if_sentiments==true;
+
+
+
+each_senti = foreach if_senti_tweets generate user_name, tweets;
+
+
+
+
+sentiments_sorted = foreach each_senti generate user_name, IfPositive(tweets);
+
+
+
+positive_senti = filter sentiments_sorted by $1==true; 
+
+ 
+
+
+
+ grp_pos = group positive_senti by user_name;
+
+
+ 
+
+
+count_pos = foreach grp_pos generate group, COUNT(positive_senti);
+
+
+store count_pos into '/home/cloudera/output/positive_tweets';
+
+
+
+negative_senti = filter sentiments_sorted by $1==false;
+
+
+grp_neg = group negative_senti by user_name;
+
+
+count_neg = foreach grp_neg generate group, COUNT(negative_senti);
+
+
+store count_neg into '/home/cloudera/output/negative_tweets';
+
+
+
+
+
+
+
+
+
+
+

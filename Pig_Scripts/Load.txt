@@ -1,0 +1,31 @@
+register '/home/cloudera/Twitter.jar';
+
+
+define Sentiments Sentiments('/--Path to sentiments wordlist--/Sentiments-list/sentiment.txt');
+
+
+define IfPositive IfPositive('/--Path to sentiments wordlist--/Sentiments-list/Positive.txt');
+
+
+
+tweets = load '/home/cloudera/new tweets/tweet' using JsonLoader('filter_level:chararray, 
+retweeted:bytearray, in_reply_to_screen_name:chararray, 
+possibly_sensitive:bytearray, truncated:chararray, lang:chararray, in_reply_to_status_id_str:chararray, 
+id:chararray, in_reply_to_user_id_str:chararray,
+ timestamp_ms:chararray, in_reply_to_status_id:chararray, created_at:chararray, favorite_count:chararray, place:chararray, 
+coordinates:chararray, text:chararray, 
+contributors:chararray, geo:chararray, entities:map[], source:chararray, favorited:chararray, in_reply_to_user_id:chararray, 
+retweet_count:chararray, id_str:chararray,
+ user:map[]');
+
+
+
+
+
+
+
+
+
+
+
+

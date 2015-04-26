@@ -1,0 +1,25 @@
+TwitterAgent.sources= Twitter
+TwitterAgent.channels= MemChannel
+TwitterAgent.sinks=HDFS
+TwitterAgent.sources.Twitter.type = com.cloudera.flume.source.TwitterSource
+TwitterAgent.sources.Twitter.channels=MemChannel
+
+TwitterAgent.sources.Twitter.consumerKey=xIb8oO6TF0q8Qs1r1wXS0TklT
+TwitterAgent.sources.Twitter.consumerSecret=n4pqs0vvqPGsgylYFKUENwvkQomtnafq7LGzu80RPVveTBZpJa
+TwitterAgent.sources.Twitter.accessToken=2789138636-jiQLD7YUK1a8mTzRQJgZUbWanv9E7LaALxPY1pu
+TwitterAgent.sources.Twitter.accessTokenSecret=7eUNQS18agXqsMOvIJmdy6aPQS6NN3IQq7RLeTu8Jge4Z
+
+TwitterAgent.sources.Twitter.keywords= I, am, the, are, is, gaurav, world
+
+TwitterAgent.sinks.HDFS.channel=MemChannel
+TwitterAgent.sinks.HDFS.type=hdfs
+TwitterAgent.sinks.HDFS.hdfs.path=hdfs://localhost:8020/user/flume/tweets
+TwitterAgent.sinks.HDFS.hdfs.fileType=DataStream
+TwitterAgent.sinks.HDFS.hdfs.writeformat=Text
+TwitterAgent.sinks.HDFS.hdfs.batchSize=1000
+TwitterAgent.sinks.HDFS.hdfs.rollSize=0
+TwitterAgent.sinks.HDFS.hdfs.rollCount=10000
+TwitterAgent.sinks.HDFS.hdfs.rollInterval=600
+TwitterAgent.channels.MemChannel.type=memory
+TwitterAgent.channels.MemChannel.capacity=10000
+TwitterAgent.channels.MemChannel.transactionCapacity=5000
