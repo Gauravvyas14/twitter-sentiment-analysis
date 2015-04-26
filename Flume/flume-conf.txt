@@ -4,10 +4,10 @@ TwitterAgent.sinks=HDFS
 TwitterAgent.sources.Twitter.type = com.cloudera.flume.source.TwitterSource
 TwitterAgent.sources.Twitter.channels=MemChannel
 
-TwitterAgent.sources.Twitter.consumerKey=xIb8oO6TF0q8Qs1r1wXS0TklT
-TwitterAgent.sources.Twitter.consumerSecret=n4pqs0vvqPGsgylYFKUENwvkQomtnafq7LGzu80RPVveTBZpJa
-TwitterAgent.sources.Twitter.accessToken=2789138636-jiQLD7YUK1a8mTzRQJgZUbWanv9E7LaALxPY1pu
-TwitterAgent.sources.Twitter.accessTokenSecret=7eUNQS18agXqsMOvIJmdy6aPQS6NN3IQq7RLeTu8Jge4Z
+TwitterAgent.sources.Twitter.consumerKey=x-----8Qs1r1wXS0TklT
+TwitterAgent.sources.Twitter.consumerSecret=n4pqs0-----sgylYFKUENwvkQomt-----7LGzu80RPVveTBZpJa
+TwitterAgent.sources.Twitter.accessToken=2789138636-jiQLD7----a8mTzRQJgZU-----E7LaALxPY1pu
+TwitterAgent.sources.Twitter.accessTokenSecret=7eUN-----gXqsMOvIJmdy6aPQS6NN-----LeTu8Jge4Z
 
 TwitterAgent.sources.Twitter.keywords= I, am, the, are, is, gaurav, world
 
